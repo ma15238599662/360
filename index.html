@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>360首页</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div class="fullPage">
+		<!-- 第一屏 -->
+		<div class="section first ">
+			<div class="logo"></div>
+			<div class="txt ">
+				<img src="./images/text_1.png" alt="" />
+				<img src="./images/text_2.png" alt="" />
+				<img src="./images/text_3.png" alt="" />
+				<img src="./images/text_4.png" alt="" />
+				<img src="./images/text_5.png" alt="" />
+				<img src="./images/text_6.png" alt="" />
+				<img src="./images/text_7.png" alt="" />
+				<img src="./images/text_8.png" alt="" />
+			</div>
+			<div class="feature">
+				<img src="./images/info_1.png" alt="">
+			</div>
+		</div>
+		<!-- 第二屏 -->
+		<div class="section second">
+			<!-- 盾牌 -->
+			<div class="shield">
+				<img src="./images/shield_1.png" alt="" />
+				<img src="./images/shield_2.png" alt="" />
+				<img src="./images/shield_3.png" alt="" />
+				<img src="./images/shield_4.png" alt="" />
+				<img src="./images/shield_5.png" alt="" />
+				<img src="./images/shield_6.png" alt="" />
+				<img src="./images/shield_7.png" alt="" />
+				<img src="./images/shield_8.png" alt="" />
+				<img src="./images/shield_9.png" alt="" />
+			</div>
+			<!-- 介绍 -->
+			<div class="intro">
+				<img src="./images/info_2.png" alt="">
+			</div>
+		</div>
+		<!-- 第三屏 -->
+		<div class="section third">
+			<!-- 介绍 -->
+			<div class="info">
+				<img src="./images/info_3.png" alt="">
+
+			</div>
+			<!-- 圆 -->
+			<div class="circle">
+				<img src="./images/circle.png" alt="">
+
+			</div>
+			<!-- 火箭 -->
+			<div class="rocket">
+				<img src="./images/rocket.png" alt="">
+			</div>
+		</div>
+		<!-- 第四屏 -->
+		<div class="section fourth">
+			<div class="search">
+				<!-- <img src="./images/search.png" alt=""> -->
+				<i></i>
+				<span></span>
+				<div>
+
+				</div>
+			</div>
+			<div class="info">
+				<img src="./images/info_4.png" alt="">
+			</div>
+		</div>
+		<!-- 第五屏 -->
+		<div class="section fifth ">
+			<!-- 介绍 -->
+			<div class="info">
+				<img src="./images/info_5.png" alt="">
+			</div>
+			<!-- 窗口 -->
+			<div class="box">
+				<div class="leftLine"></div>
+				<div class="topLine"></div>
+				<div class="rightLine"></div>
+				<div class="bottomLine"></div>
+				<div class="searchBox">
+					<div class="big"></div>
+					<div class="small"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.fullPage').fullpage({
+				sectionsColor : ['#0DA5D6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+				afterLoad: function(origin, destination, direction){
+				     console.log(destination)
+				     $('.section').removeClass('current');
+				     setTimeout(function () {
+
+				     	$('.section').eq(destination - 1).addClass('current')
+				     }, 100)
+				}
+			})
+
+		})
+	</script>
+</body>
+</html>

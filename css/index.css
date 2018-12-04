@@ -1,0 +1,311 @@
+/*
+* @Author: Marte
+* @Date:   2018-11-22 15:23:26
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-11-24 15:59:13
+*/
+* {
+	padding: 0;
+	margin: 0;
+
+}
+
+.first {
+	overflow: hidden;
+	text-align: center;
+
+}
+
+.first .logo{
+	width: 247px;
+	height: 185px;
+	margin: 75px auto 80px;
+	background-image: url(../images/logo.png);
+}
+.first .txt img{
+	margin-bottom: 40px;
+	margin: 0 35px;
+
+}
+.first.current .txt img{
+	transition: all 1.5s;
+	margin: 0px;
+}
+.feature {
+	margin-top: 60px;
+}
+.second .fp-tableCell{
+	display: flex;
+	margin-left: 140px;
+}
+.shield {
+	margin-top: 70px;
+	flex: 3;
+}
+.shield img {
+	float: left;
+	transition: all 2s;
+}
+.intro {
+	margin-left: 30px;
+	margin-top: 150px;
+	flex: 5;
+}
+.shield img:nth-child(1) {
+	transform:  translate(552px, 100px )
+ rotateZ(45deg)}
+.shield img:nth-child(2) {
+	transform:  translate(-330px, 0px ) rotateZ(-155deg);
+}
+.shield img:nth-child(3) {
+	transform:  translate(-222px, 70px ) rotateZ(124deg);
+}
+.shield img:nth-child(4) {
+	transform:  translate(466px, 190px ) rotateZ(145deg);
+}
+.shield img:nth-child(5) {
+	transform: translate(577px, 10px) rotateZ(-133deg);
+}
+.shield img:nth-child(6) {
+	transform:  translate(-123px, 40px ) rotateZ(142deg);
+}
+.shield img:nth-child(7) {
+	transform:  translate(288px, -10px ) rotateZ(124deg);
+}
+.shield img:nth-child(8) {
+	transform:  translate(11px, -390px ) rotateZ(133deg);
+}
+.shield img:nth-child(9) {
+	transform:  translate(-293px, -100px ) rotateZ(245deg);
+}
+.current .shield img {
+	transform: translate(0,0) rotate(0deg);
+}
+.third {
+	position: relative;
+	overflow: hidden;
+}
+.third .fp-tableCell {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 100px;
+}
+.info {
+}
+
+.rocket {
+	position:absolute;
+	left: 390px;
+	bottom: -220px;
+	transition: all 1s;
+}
+.current .rocket {
+	left: 930px;
+	bottom: 220px;
+}
+
+.fourth .fp-tableCell {
+	display: flex;
+	// align-items: center;
+	padding-left: 100px;
+	position: relative;
+}
+.fourth .info {
+	padding-left:50px;
+	margin-top: 145px;
+	flex: 1;
+}
+.search {
+	margin-top: 125px;
+	flex: 1;
+}
+
+.current .search i {
+	display: block;
+	width: 530px;
+	height: 66px;
+	background-image: url(../images/search.png);
+	// transform: translateX(-650px);
+	// transition: all 2s;
+	animation: search 1s linear;
+
+}
+
+.current .search span {
+	position:absolute;
+	display: block;
+	width: 100px;
+	height: 22px;
+	left:116px;
+	top:150px;
+	background-image: url(../images/key.png);
+	// transition: all 1s;
+	animation: text 2.5s linear;
+
+}
+
+.current .search div {
+	position:absolute;
+	left:100px;
+	top: 177px;
+	width: 518px;
+	height: 354px;
+	background-image:url(../images/result.png);
+	animation: detail 3s linear;
+}
+
+@keyframes search {
+	0% {
+		transform: translateX(-650px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+@keyframes text {
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+	49% {
+		height: 0px;
+		width: 0px;
+	}
+	50% {
+		height: 22px;
+		width: 21px;
+	}
+	61% {
+		width: 21px;
+	}
+	62% {
+		width: 40px;
+	}
+	74% {
+		width: 40px;
+	}
+	75% {
+		width: 58px;
+	}
+	87% {
+		width: 58px;
+	}
+	88% {
+		width: 78px;
+	}
+	99% {
+		width: 78px;
+	}
+	100% {
+		height: 22px;
+		width: 100px;
+	}
+}
+@keyframes detail {
+	0%{
+		height: 0px;
+	}
+	90%{
+		height: 0px;
+	}
+	100%{
+		height: 354px;
+	}
+}
+
+.fifth {
+	overflow: hidden;
+}
+.fifth .info {
+	text-align: center;
+	width: 100%;
+	height: 135px;
+	margin-bottom: 30px;
+}
+.fifth .box{
+	height: 500px;
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+}
+.fifth.current .box{
+	background-color: #31B2DC;
+	transition: all 1s 4s linear;
+
+}
+.fifth .leftLine {
+	position: absolute;
+	background-color: #98D9EE;
+	width: 1px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	margin-top: -700px;
+}
+
+.fifth .rightLine {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	background-color: #98D9EE;
+	margin-top: 700px;
+}
+
+.fifth .topLine {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	left: 0;
+	top: 0;
+	background-color: #98D9EE;
+	margin-left: 1200px;
+}
+
+.fifth.current .leftLine,
+.fifth.current .rightLine,
+.fifth.current .topLine,
+.current .searchBox .small {
+	z-index: 1;
+	margin: 0;
+	transition: all 1.5s .5s linear;
+}
+.fifth .searchBox {
+	height: 70px;
+	width: 100%;
+	position: relative;
+}
+.searchBox .big {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: url(../images/toolbar.png) no-repeat;
+
+}
+.searchBox .small {
+	width: 1px;
+	height: 24px;
+	position: absolute;
+	left: 73px;
+	top: 31px;
+	opacity:0;
+	border: 1px solid #98D9EE;
+	border-radius: 4px;
+	z-index: -1;
+	// border: 1px solid red;
+}
+
+.current .searchBox .small {
+	width:91%;
+	opacity:1;
+	transition: all 1.5s 3s linear;
+}
+
+.current .searchBox .big {
+	opacity:1;
+	transition: all 1s 3.7s linear;
+
+}
